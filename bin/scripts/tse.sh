@@ -3,14 +3,14 @@
 # Tmux session manager.
 #
 # We want this to be simple.
-# 1. Get a list of dirs that we want to cd into.
+# 1. Get a list of the cli-apps/dirs that we want to launch/cd into.
 # 2. Based on what we choose, either cd to dir or launch the program in a new tmux session.
 # 3. Bask in the awesomeness that is using a tool that you've made.
 
 # "Settings" lol
 declare -a TSE_BASE_DIRS=(~/master ~/master/dotfiles ~/.config)
 declare -a TSE_FZF_OPTS=(--prompt=" Dirs and programs  " --height=~50% --layout=reverse --border --exit-0)
-declare -a TSE_PROGRAM_LIST=(ncspot xplr btop)
+declare -a TSE_PROGRAM_LIST=(ncspot xplr btop youtube)
 
 # Items to choose
 declare -a TSE_DIR_LIST
@@ -50,8 +50,7 @@ tse_actions() {
             tmux new-session -s "${session_name}" "${item_sel}"
             exit 0
         fi
-        tmux attach-session -t "${session_name}"
-        return 0
+        # tmux attach-session -t "${session_name}"
     fi
 
     if [[ -z "${TMUX}" ]] && [[ -n "${TSE_SESSION_EXIST}" ]]; then
@@ -65,20 +64,17 @@ tse_actions() {
             fi
         fi
         tmux attach-session -t "${session_name}"
-        return 0
     fi
 
     if ! tmux has-session -t "${session_name}" 2>/dev/null; then
-        echo "Inside a tmux session. Creating new session"
         if [[ "${tse_type}" == "dir" ]]; then
             tmux new-session -ds "${session_name}" -c "${item_sel}"
         elif [[ "${tse_type}" == "cmd" ]]; then
             tmux new-session -ds "${session_name}" "${item_sel}"
         fi
+    tmux switch-client -t "${session_name}"
     fi
 
-    tmux switch-client -t "${session_name}"
-    return 0
 }
 
 tse_sesh_name_type

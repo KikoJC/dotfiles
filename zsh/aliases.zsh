@@ -41,12 +41,8 @@ alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/p
 alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist" 
 alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist" 
 
-# Help people new to Arch
-# alias pacdiff='sudo -H DIFFPROG=meld pacdiff'
-alias tb='nc termbin.com 9999'
-
 # Replace yay with paru if installed
-[ ! -x /usr/bin/yay ] && [ -x /usr/bin/paru ] && alias yay='paru'
+[[ ! -x /usr/bin/yay ]] && [[ -x /usr/bin/paru ]] && alias yay='paru'
 
 # Personal preference aliases
 ## Neovim Configuration switcher
@@ -63,7 +59,7 @@ alias lg='lazygit'
 alias man='batman'
 alias nv='nvim'
 alias wiki='wiki-tui'
-alias yt='ytfzf'
+alias youtube='ytfzf'
 alias zreload='. $ZDOTDIR/.zshrc'
 
 
