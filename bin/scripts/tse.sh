@@ -8,7 +8,7 @@
 # 3. Bask in the awesomeness that is using a tool that you've made.
 
 # "Settings" lol
-declare -a TSE_BASE_DIRS=(~/master ~/master/dotfiles ~/.config)
+declare -a TSE_BASE_DIRS=(~/master ~/master/** ~/master/config)
 declare -a TSE_FZF_OPTS=(--prompt=" Dirs and programs  " --height=~50% --layout=reverse --border --exit-0)
 declare -a TSE_PROGRAM_LIST=(ncspot xplr btop youtube)
 
@@ -20,9 +20,9 @@ TSE_SESSION_EXIST=$(pgrep tmux)
 
 # Getting the name and type of the item selected
 tse_sesh_name_type() {
-    local -r item_sel=$(printf "%s\n%s\n" "${TSE_DIR_LIST[@]}" "${TSE_PROGRAM_LIST[@]}" | fzf "${TSE_FZF_OPTS[@]}")
-    local -r is_cmd=$(printf "%s\n" "${TSE_PROGRAM_LIST[@]}" | grep ^"${item_sel}")
-    local -r is_dir=$(printf "%s\n" "${TSE_DIR_LIST[@]}" | grep ^"${item_sel}")
+    local -r item_sel=$(printf "%s\n%s\n" "${TSE_PROGRAM_LIST[@]}" "${TSE_DIR_LIST[@]}" | fzf "${TSE_FZF_OPTS[@]}")
+    local -r is_cmd=$(printf "%s\n" "${TSE_PROGRAM_LIST[@]}" | grep ^"${item_sel}"$)
+    local -r is_dir=$(printf "%s\n" "${TSE_DIR_LIST[@]}" | grep ^"${item_sel}"$)
 
     if [[ -z "${item_sel}" ]]; then
         echo "No item selected."
@@ -50,7 +50,7 @@ tse_actions() {
             tmux new-session -s "${session_name}" "${item_sel}"
             exit 0
         fi
-        # tmux attach-session -t "${session_name}"
+        tmux attach-session -t "${session_name}"
     fi
 
     if [[ -z "${TMUX}" ]] && [[ -n "${TSE_SESSION_EXIST}" ]]; then
@@ -75,6 +75,7 @@ tse_actions() {
     tmux switch-client -t "${session_name}"
     fi
 
+    tmux switch-client -t "${session_name}"
 }
 
 tse_sesh_name_type

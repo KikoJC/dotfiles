@@ -83,6 +83,7 @@ autoload -U +X bashcompinit && bashcompinit
 # Custom configuration
 source "${ZDOTDIR}"/myfunctions.zsh
 source "${ZDOTDIR}"/aliases.zsh
+source "${ZDOTDIR}"/garuda-aliases.zsh
 source "${ZDOTDIR}"/keybindings.zsh
 source "${XDG_CONFIG_HOME}"/fzf/fzf.conf
 
