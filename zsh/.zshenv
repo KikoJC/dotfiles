@@ -36,6 +36,7 @@ export LDLIBS="-lcrypt -lcs50 -lm"
 # Add to $PATH
 PATH="/home/kiko/.cargo/bin${PATH:+:${PATH}}"; export PATH;
 PATH="/home/kiko/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PATH="/home/kiko/Desktop${PATH:+:${PATH}}"; export PATH;
 
 # Perl
 PERL5LIB="/home/kiko/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
