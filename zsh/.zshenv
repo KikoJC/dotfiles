@@ -45,4 +45,4 @@ PERL_MB_OPT="--install_base /home/kiko/perl5"; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/kiko/perl5"; export PERL_MM_OPT;
 
 # Bemenu
-# export BEMENU_OPTS='-i -w -l 15 -M 50 -W 0.5 -B 1 -R 7'
+# export -a BEMENU_OPTS='-i -w -l 5 -M 50 -W 0.5 -B 1 -R 7'
