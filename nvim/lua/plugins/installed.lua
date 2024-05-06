@@ -63,6 +63,15 @@ return {
     {"MunifTanjim/nui.nvim", event = "VeryLazy"},
     {"nvim-tree/nvim-web-devicons", lazy = true, opts = {color_icons = true}},
     {"j-hui/fidget.nvim", tag = "legacy", event = "LspAttach", opts = {} },
+    {"SmiteshP/nvim-navbuddy",
+        dependencies = {
+            "vim/nvim-lspconfig",
+            "SmiteshP/nvim-navic",
+            "MunifTanjim/nui.nvim",
+            "numToStr/Comment.nvim",        -- Optional
+            "nvim-telescope/telescope.nvim" -- Optional
+        },
+    },
     {"SmiteshP/nvim-navic", opts = {}},
 
     -- Markup

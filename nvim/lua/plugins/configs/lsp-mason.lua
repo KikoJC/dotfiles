@@ -3,6 +3,7 @@ return {
         config = function()
             require("neodev").setup()
             local navic = require("nvim-navic")
+            local navbuddy = require("nvim-navbuddy")
             local lsp_config = require("lspconfig")
 
             local capabilities = vim.tbl_deep_extend(
@@ -14,6 +15,7 @@ return {
             local on_attach = function(client, bufnr)
                 if client.server_capabilities.documentSymbolProvider then
                     navic.attach(client, bufnr)
+                    navbuddy.attach(client,bufnr)
                 end
 
                 local signs = { Error = " ", Warn = " ", Hint = "", Info = " " }
