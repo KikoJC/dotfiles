@@ -1,5 +1,4 @@
-.nvimlog
-.zcompdump
-.zhistory
-lazy-lock.json
-
+zsh/.nvimlog
+zsh/.zcompdump
+zsh/.zhistory
+nvim/lazy-lock.json
