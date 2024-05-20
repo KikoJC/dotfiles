@@ -76,7 +76,6 @@ return {
 
     -- Markup
     {"zk-org/zk-nvim"},
-    {"nvim-orgmode/orgmode"},
     {"quarto-dev/quarto-nvim",
         dependencies = {
             {"GCBallesteros/jupytext.nvim", config = true},
@@ -98,5 +97,4 @@ return {
         },
     },
     {"3rd/image.nvim"},
-    {"benlubas/molten-nvim"},
 }
