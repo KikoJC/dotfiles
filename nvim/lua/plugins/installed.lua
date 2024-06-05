@@ -78,7 +78,6 @@ return {
     {"zk-org/zk-nvim"},
     {"quarto-dev/quarto-nvim",
         dependencies = {
-            {"GCBallesteros/jupytext.nvim", config = true},
             {"jmbuhr/otter.nvim",
                 opts = {
                     buffers = {
@@ -96,5 +95,4 @@ return {
             {"mfussenegger/nvim-dap-python"},
         },
     },
-    {"3rd/image.nvim"},
 }
