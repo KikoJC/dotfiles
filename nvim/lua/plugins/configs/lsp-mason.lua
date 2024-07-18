@@ -110,7 +110,6 @@ return {
                     "marksman",
                     "pyright",
                     "quick_lint_js",
-                    "r_language_server",
                     "taplo",
                     "tsserver",
                 },

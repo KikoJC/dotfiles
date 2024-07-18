@@ -7,7 +7,7 @@ vim.opt.buflisted = false
 vim.opt.cmdheight = 1
 vim.opt.completeopt = {"menu", "menuone", "noselect", "noinsert", "preview"}
 vim.opt.confirm = true
-vim.opt.colorcolumn = "90"
+vim.opt.colorcolumn = "80"
 vim.opt.cpoptions:append("IW")
 vim.opt.cursorline = true
 vim.opt.expandtab = true

@@ -5,6 +5,7 @@ require("quarto").activate()
 wo.conceallevel = 1
 wo.linebreak = true
 wo.breakindent = true
+vim.bo.textwidth = 80
 wo.spell = true
 wo.wrap = true
 

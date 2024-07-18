@@ -17,6 +17,7 @@ map({"n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true}
 
 -- Delete a word backwards
 map("n", "dw", "diw", {desc = "Delete inside word"})
+map("n", "cw", "ciw", {desc = "Change inside word"})
 
 -- Move to window using the <ctrl> hjkl keys
 map("n", "<C-h>", "<C-w>h", {desc = "Go to left window", remap = true})
