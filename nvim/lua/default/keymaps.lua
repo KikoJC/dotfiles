@@ -54,7 +54,7 @@ map("v", "<", "<gv")
 map("v", ">", ">gv")
 
 -- Files
-map("n", "<leader>fe", "<cmd>Ex.<cr>", {desc = "Toggle netrw in Bfr/Win cwd (File Explorer)", remap = true})
+-- map("n", "<leader>fe", "<cmd>Ex.<cr>", {desc = "Toggle netrw in Bfr/Win cwd (File Explorer)", remap = true})
 map("n", "<leader>fn", "<cmd>enew<cr>", {desc = "Create new file in cwd"})
 
 -- windows

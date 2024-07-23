@@ -1,7 +1,27 @@
 return {
     {"mfussenegger/nvim-dap",
         config = function()
-            require('dap-python').setup("~/pyvenvs/default/bin/python")
+            local dap = require("dap")
+            -- require('dap-python').setup("~/pyvenvs/default/bin/python")
+
+            -- Adapters
+            dap.adapter.gdb = {
+                type = "executable",
+                command = "gdb",
+                args = {"-i", "dap"}
+            }
+
+            -- Configurations
+            dap.configurations.c = {
+                name = "Launch",
+                type = "gdb",
+                request = "launch",
+                program = function()
+                  return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+                end,
+                cwd = "${workspaceFolder}",
+                stopAtBeginningOfMainSubprogram = false,
+            }
 
             vim.keymap.set('n', '<F5>', function() require('dap').continue() end, {desc = "Dap Continue"})
             vim.keymap.set('n', '<F10>', function() require('dap').step_over() end, {desc = "Dap Step over"})

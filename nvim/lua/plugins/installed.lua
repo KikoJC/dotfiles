@@ -5,6 +5,8 @@ return {
     {"echasnovski/mini.bufremove", version = false, opts = {}},
     {"nvim-lua/plenary.nvim", lazy = true},
     {"jiaoshijie/undotree", config = true,},
+    {"nvim-tree/nvim-tree.lua", version = "*", lazy = false, opts = {}},
+    {"nvim-tree/nvim-tree.lua", version = "*", lazy = false, opts = {}},
 
     -- Editing, navigation and highlighting
     {"nvim-treesitter/nvim-treesitter",
@@ -28,13 +30,13 @@ return {
     {"williamboman/mason-lspconfig.nvim", opts = {}},
 
     -- Autocompletion
-    "hrsh7th/nvim-cmp",
-    "hrsh7th/cmp-buffer",
-    "hrsh7th/cmp-cmdline",
-    "hrsh7th/cmp-nvim-lsp",
-    "hrsh7th/cmp-nvim-lua",
-    "hrsh7th/cmp-path",
-    "tamago324/cmp-zsh",
+    {"hrsh7th/nvim-cmp"},
+    {"hrsh7th/cmp-buffer"},
+    {"hrsh7th/cmp-cmdline"},
+    {"hrsh7th/cmp-nvim-lsp"},
+    {"hrsh7th/cmp-nvim-lua"},
+    {"hrsh7th/cmp-path"},
+    {"tamago324/cmp-zsh"},
 
     -- Snippets
     {"L3MON4D3/LuaSnip",

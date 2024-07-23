@@ -74,7 +74,7 @@ vim.cmd.colorscheme "habamax"
 vim.g.vim_json_conceal = 0
 
 -- Default browser
-vim.g.netrw_browsex_viewer = "wyeb"
+-- vim.g.netrw_browsex_viewer = "wyeb"
 
 -- make zsh files recognized as sh for bash-ls & treesitter
 -- https://nanotipsforvim.prose.sh/treesitter-and-lsp-support-for-zsh
