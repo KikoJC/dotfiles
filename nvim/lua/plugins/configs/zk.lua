@@ -5,7 +5,7 @@ return {
                 picker = "telescope",
                 auto_attach = {
                     enabled = true,
-                    filetypes = {"markdown", "quarto"},
+                    filetypes = {"markdown"},
                 },
             })
         end

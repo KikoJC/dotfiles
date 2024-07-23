@@ -20,7 +20,7 @@ return {
                 },
             },
         },
-        ft = { "quarto", "markdown" },
+        ft = {"quarto", "qmd", "Rmd"},
         keys = {
             { "<leader>Qa",      ":QuartoActivate<cr>",                           desc = "quarto activate" },
             { "<leader>Qp",      ":lua require'quarto'.quartoPreview()<cr>",      desc = "quarto preview" },

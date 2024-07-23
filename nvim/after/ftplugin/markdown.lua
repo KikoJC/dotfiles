@@ -1,6 +1,5 @@
 -- |local-options|
 local wo = vim.wo
-require("quarto").activate()
 
 wo.conceallevel = 1
 wo.linebreak = true

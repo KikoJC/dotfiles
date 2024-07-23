@@ -5,7 +5,7 @@ return {
             -- require('dap-python').setup("~/pyvenvs/default/bin/python")
 
             -- Adapters
-            dap.adapter.gdb = {
+            dap.adapters.gdb = {
                 type = "executable",
                 command = "gdb",
                 args = {"-i", "dap"}
