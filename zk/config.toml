@@ -1,3 +1,35 @@
+# MAIN NOTEBOOK
+[notebook]
+dir = "~/master/knowledge-base"
+
+#NOTE SETTINGS
+[note]
+language = "en"
+default-title = "Untitled"
+filename = "{{format-date now 'timestamp'}}_{{slug title}}"
+extension = "md"
+template = "default.md"
+
+# EXTRA VARIABLES
+[extra]
+author = "Kiko JC"
+
+# MARKDOWN SETTINGS
+[format.markdown]
+hashtags = true
+colon-tags = false
+
+# EXTERNAL TOOLS
+[tool]
+editor = "nvim"
+shell = "/usr/bin/bash"
+
+# ALIAS
+[alias]
+config = 'nvim "$HOME/master/dotfiles/zk/config.toml"'
+nt = 'zk new --title "$*"'
+
+# EDITOR INTEGRATION (LSP)
 [lsp]
 
 [lsp.diagnostics]

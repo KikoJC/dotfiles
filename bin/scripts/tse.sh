@@ -8,9 +8,9 @@
 # 3. Bask in the awesomeness that is using a tool that you've made.
 
 # "Settings" lol
-declare -a TSE_BASE_DIRS=(~/master ~/master/*/)
+declare -a TSE_BASE_DIRS=(~/ ~/master/*/)
 declare -a TSE_FZF_OPTS=(--prompt=" Dirs and programs  " --height=~50% --layout=reverse --border --exit-0)
-declare -a TSE_PROGRAM_LIST=(ncspot xplr btop youtube)
+declare -a TSE_PROGRAM_LIST=(ncspot yazi btop youtube)
 
 # Items to choose
 declare -a TSE_DIR_LIST
