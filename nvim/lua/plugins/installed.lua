@@ -3,6 +3,7 @@ return {
     {"folke/which-key.nvim", event = "VeryLazy", opts = {}},
     {"folke/trouble.nvim", opts = {}},
     {"echasnovski/mini.bufremove", version = false, opts = {}},
+    {"echasnovski/mini.pairs", version = false, opts = {}},
     {"nvim-lua/plenary.nvim", lazy = true},
     {"jiaoshijie/undotree", config = true,},
     {"nvim-tree/nvim-tree.lua", version = "*", lazy = false, opts = {}},
