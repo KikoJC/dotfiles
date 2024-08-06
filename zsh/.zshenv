@@ -13,7 +13,7 @@ export XDG_SCREENSHOTS_DIR="$HOME/Pictures/screenshots/"
 export XDG_STATE_HOME=~/.local/state
 
 export TERM="xterm-256color"
-export BROWSER="vieb"
+export BROWSER="brave"
 export EDITOR="nvim"
 export VISUAL="nvim"
 export VIRTUAL_ENV="$HOME/pyvenvs"
