@@ -72,6 +72,7 @@ config_navigation() {
 }
 
 master_navigation() {
+    FZF_OPTS=(--prompt=" Master dirs " --height=~50% --layout=reverse --border --exit-0)
     if [ -d "~/master" ]; then
         return 0
     else
@@ -79,7 +80,7 @@ master_navigation() {
     fi
 
     local -r dir_list=$(find "${dir[@]}" -mindepth 1 -maxdepth 2 -type d)
-    local -r dir_selected="$(printf "%s" "${dir_list[@]}" | fzf)"
+    local -r dir_selected="$(printf "%s" "${dir_list[@]}" | fzf "${FZF_OPTS[@]}")"
 
     if [ -z "$dir_selected" ]; then
         return 0

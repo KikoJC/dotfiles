@@ -34,6 +34,8 @@ source /usr/share/fzf/completion.zsh
 
 # Better vim mode for zsh
 source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+# Change to Zsh's default readkey engine
+ZVM_READKEY_ENGINE=$ZVM_READKEY_ENGINE_ZLE
 
 # Arch Linux command-not-found support, you must have package pkgfile installed
 # https://wiki.archlinux.org/index.php/Pkgfile#.22Command_not_found.22_hook
@@ -81,6 +83,7 @@ zstyle ':completion:*' cache-path ~/.cache/zcache
 autoload -U +X bashcompinit && bashcompinit
 
 # Custom configuration
+source "${ZDOTDIR}"/.zshenv
 source "${ZDOTDIR}"/myfunctions.zsh
 source "${ZDOTDIR}"/aliases.zsh
 source "${ZDOTDIR}"/garuda-aliases.zsh

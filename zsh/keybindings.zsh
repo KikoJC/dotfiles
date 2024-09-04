@@ -6,9 +6,9 @@ bindkey -M viins "^h" backward-char
 bindkey -M viins "^l" forward-char
 
 # Start tmux "Main" session
-bindkey -s "^Ot" tse.sh
+bindkey -sM viins "^Ot" tse.sh
 
-# Change to config dir
-bindkey -s "^Oc" config_navigation
-bindkey -s "^Om" master_navigation
-bindkey -s "^Ow" html-finb.sh
+# Change tM viinso config dir
+bindkey -sM viins "^Oc" config_navigation
+bindkey -sM viins "^Om" master_navigation
+bindkey -sM viins "^Ow" html-finb.sh
