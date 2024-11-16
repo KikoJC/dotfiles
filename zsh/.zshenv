@@ -46,3 +46,4 @@ PERL_MM_OPT="INSTALL_BASE=/home/kiko/perl5"; export PERL_MM_OPT;
 
 # Bemenu
 # export -a BEMENU_OPTS='-i -w -l 5 -M 50 -W 0.5 -B 1 -R 7'
+. "$HOME/.cargo/env"
