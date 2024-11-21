@@ -21,9 +21,9 @@ export VIRTUAL_ENV="$HOME/pyvenvs"
 [ -x "$(which zk)" ] && export ZK_NOTEBOOK_DIR="$HOME/mainframe/knowledge-base"
 
 # Nvm
-export NVM_DIR="$HOME"/.nvm
-[ -s "$NVM_DIR"/nvm.sh ] && \. "$NVM_DIR"/nvm.sh  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export NVM_DIR="$HOME"/.nvm
+# [ -s "$NVM_DIR"/nvm.sh ] && \. "$NVM_DIR"/nvm.sh  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 ## For cs50
 export LIBRARY_PATH=/usr/local/lib
