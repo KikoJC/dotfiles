@@ -88,6 +88,8 @@ source "${ZDOTDIR}"/myfunctions.zsh
 source "${ZDOTDIR}"/aliases.zsh
 source "${ZDOTDIR}"/garuda-aliases.zsh
 source "${ZDOTDIR}"/keybindings.zsh
+source "${ZDOTDIR}"/zoxide.zsh
 source "${XDG_CONFIG_HOME}"/fzf/fzf.conf
 
-[ -f "/home/kiko/.ghcup/env" ] && source "/home/kiko/.ghcup/env" # ghcup-env
+
+[ -f "/home/kiko/.ghcup/env" ] && . "/home/kiko/.ghcup/env" # ghcup-env

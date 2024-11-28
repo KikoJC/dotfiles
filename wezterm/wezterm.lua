@@ -11,7 +11,7 @@ config.window_padding = {
       bottom = 0,
 }
 config.window_decorations = "NONE"
-config.font = wezterm.font 'Victor Mono Nerd Font'
+config.font = wezterm.font 'VictorMono Nerd Font'
 config.font_size = 9
 
 return config

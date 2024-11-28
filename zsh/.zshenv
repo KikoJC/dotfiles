@@ -12,13 +12,14 @@ export XDG_PICTURES_DIR=~/Pictures
 export XDG_SCREENSHOTS_DIR="$HOME/Pictures/screenshots/"
 export XDG_STATE_HOME=~/.local/state
 
+export TERMINAL="wezterm"
 export TERM="xterm-256color"
 export BROWSER="brave"
 export EDITOR="nvim"
 export VISUAL="nvim"
 export VIRTUAL_ENV="$HOME/pyvenvs"
 [ -d "$VIRTUAL_ENV" ] || mkdir "$VIRTUAL_ENV"
-[ -x "$(which zk)" ] && export ZK_NOTEBOOK_DIR="$HOME/mainframe/knowledge-base"
+[ -x "$(which zk)" ] && export ZK_NOTEBOOK_DIR="$HOME/master/knowledge-base"
 
 # Nvm
 # export NVM_DIR="$HOME"/.nvm
