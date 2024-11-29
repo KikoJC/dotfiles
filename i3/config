@@ -10,7 +10,14 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
+
 exec setxkbmap -option "ctrl:no caps"
+
+# UI
+exec picom --corner-radius 7 &
+exec xset s off
+exec xset -dpms
+exec_always feh --bg-fill ~/Pictures/blond-woman-blood-dragon.jpg
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -34,6 +41,9 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
+exec --no-startup-id bitwarden-desktop
+exec --no-startup-id zapzap
+exec --no-startup-id flameshot
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -218,15 +228,11 @@ bar {
     binding_mode       #FF5555 #FF5555 #F8F8F2
   }
   position top
-  tray_output primary
+  tray_output eDP
+  tray_output HDMI-A-0
   status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks -c ~/.config/i3blocks/i3blocks.conf
 }
 
 bindsym $mod+d exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -i -l 10  -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' -fn 'VictorMono Nerd Font-8' -p 'Run >'"
 bindsym $mod+F2 exec --no-startup-id rofi -show drun
 
-# Display Wallpaper
-exec picom --corner-radius 5 &
-exec xset s off
-exec xset -dpms
-exec_always feh --bg-fill ~/Pictures/blond-woman-blood-dragon.jpg
