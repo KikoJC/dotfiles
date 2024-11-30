@@ -13,7 +13,7 @@ set $mod Mod4
 
 exec setxkbmap -option "ctrl:no caps"
 
-# UI
+# UI startup programs
 exec picom --corner-radius 7 &
 exec xset s off
 exec xset -dpms
@@ -129,6 +129,7 @@ bindsym $mod+Shift+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
+bindsym $mod+g exec "rofi -show window"
 
 # focus the child container
 #bindsym $mod+d focus child

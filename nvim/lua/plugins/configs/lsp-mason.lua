@@ -111,7 +111,7 @@ return {
                     "pyright",
                     "quick_lint_js",
                     "taplo",
-                    "tsserver",
+                    "ts_ls",
                 },
                 border = "single",
             })
