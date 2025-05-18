@@ -1,0 +1,9 @@
+# Font
+font-family = VictorMono Nerd Font
+font-size = 9
+
+# APPEARANCE
+theme = Dracula
+window-decoration = false
+window-padding-x = 1
+window-padding-y = 0

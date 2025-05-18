@@ -10,8 +10,14 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
+set $BROWSER brave
+set $TERMINAL wezterm
+set $FILEMANAGER wezterm -e yazi
+set $MENU --no-startup-id j4-dmenu-desktop --dmenu="bemenu  -i -w -l 15 -M 50 -W 0.5 -B 1 -R 7"
+set $LAUNCHER --no-startup-id rofi -show drun
 
 exec setxkbmap -option "ctrl:no caps"
+exec_always --no-startup-id numlockx on
 
 # UI startup programs
 exec picom --corner-radius 7 &
@@ -25,7 +31,7 @@ font pango:VictorMono Nerd Font 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
+font pango:VictorMono Nerd Font 8
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -58,22 +64,28 @@ floating_modifier $mod
 # UI
 # Gaps
 gaps inner 2px
-gaps outer 2px
+gaps outer 1px
 smart_gaps inverse_outer
 
 # Borders
-default_border pixel 2
+default_border pixel 1
 default_floating_border pixel 1
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
 
-# start a terminal
-bindsym $mod+Return exec wezterm
+# Programs
+bindsym $mod+Return exec $TERMINAL
+bindsym $mod+b exec $BROWSER
+bindsym $mod+d exec $MENU
+bindsym $mod+F2 exec $LAUNCHER
+bindsym $mod+y exec /opt/brave-bin/brave --profile-directory=Default --app-id=agimnkijcaahngcdmfeangaknmldooml
 
-# kill focused window
+# Window
 bindsym $mod+q kill
+bindsym $mod+space floating toggle
+bindsym $mod+f fullscreen toggle
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id j4-dmenu-desktop
@@ -113,16 +125,10 @@ bindsym $mod+Shift+Right move right
 # split in vertical orientation
 # bindsym $mod+v split v
 
-# enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
-
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
-
-# toggle tiling / floating
-bindsym $mod+space floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+Shift+space focus mode_toggle
@@ -176,7 +182,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Escape exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Escape exec ~/master/dotfiles/i3blocks/scripts/shutdown_menu
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -228,12 +234,10 @@ bar {
     urgent_workspace   #FF5555 #FF5555 #F8F8F2
     binding_mode       #FF5555 #FF5555 #F8F8F2
   }
+  id default
   position top
+  output eDP
+  output HDMI-A-0
   tray_output eDP
-  tray_output HDMI-A-0
-  status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks -c ~/.config/i3blocks/i3blocks.conf
+  status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks -c ~/master/dotfiles/i3blocks/i3blocks.conf
 }
-
-bindsym $mod+d exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -i -l 10  -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' -fn 'VictorMono Nerd Font-8' -p 'Run >'"
-bindsym $mod+F2 exec --no-startup-id rofi -show drun
-

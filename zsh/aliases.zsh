@@ -12,9 +12,9 @@ alias nvs='nvims'
 # Command line programs
 alias binds='IFS=$'\''\n'\'' print -c -- $(bindkey | grep -v -e '\''\^\[\['\'' -e '\''\^\[O[A-H]"'\'' | sed -e '\''s/^"//g'\'' -e '\''s/" / /g'\'') unset IFS'
 alias cat='bat'
-alias ccd='wl-copy "$(pwd)"'
 alias fm='yazi'
 alias lg='lazygit'
+eval "$(batman --export-env)"
 alias man='batman'
 alias nv='nvim'
 alias wiki='wiki-tui'
