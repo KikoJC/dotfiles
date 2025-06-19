@@ -14,4 +14,6 @@ config.window_decorations = "NONE"
 config.font = wezterm.font 'VictorMono Nerd Font'
 config.font_size = 9
 
+config.enable_wayland = false
+
 return config
