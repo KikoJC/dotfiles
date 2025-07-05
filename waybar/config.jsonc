@@ -15,7 +15,7 @@
     "modules-right": [
         "pulseaudio",
         "battery",
-        "battery#bat2",
+        // "battery#bat2",
         "clock",
         "tray"
     ],
@@ -75,7 +75,7 @@
         // "format-full": "",
         "format-icons": [" ", " ", " ", " ", " "]
     },
-    "battery#bat2": {
-        "bat": "BAT2"
-    }
+    // "battery#bat2": {
+    //     "bat": "BAT2"
+    // }
 }
